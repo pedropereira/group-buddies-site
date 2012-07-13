@@ -1,0 +1,128 @@
+.wrapper
+  margin: auto
+  position: relative
+  width: 75.9% // 960px @ 1280px
+
+
+.hidden
+  display: none
+
+
+header
+  background-color: #323232
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+  padding: 15px 0
+  position: fixed
+  width: 100%
+  z-index: 10
+
+
+.logo
+  background-image: url('/images/logo_min.png')
+  background-position: 0px 12px
+  background-repeat: no-repeat
+  float: left
+  height: 33px
+  padding-bottom: 13px
+  width: 190px
+
+
+nav
+  float: right
+  margin: 20px 0
+
+  li
+    display: inline
+    margin-left: 0.8em
+
+    a
+      padding: 0.8em 1em
+      -webkit-transition: color 0.2s ease-in-out
+      -moz-transition: color 0.2s ease-in-out
+      -o-transition: color 0.2s ease-in-out
+      transition: color 0.2s ease-in-out
+
+    a.current
+      background-image: url('/images/menu.png')
+      border-radius: 7px
+
+  li:first-child
+    margin-left: 0
+
+
+.team-member
+  left: 0
+  min-height: 100%
+  position: fixed
+  top: 0
+  width: 100%
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+  h1
+    margin-left: 55%
+    margin-top: 20%
+
+  h2, p
+    margin-left: 55.25%
+
+  p
+    margin-top: 2%
+
+  .left
+    display: block
+    background-image: url('/images/arrow_left.png')
+    height: 35px
+    position: absolute
+    top: 60%
+    left: -10%
+    width: 20px
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+
+  .left:hover
+    background-image: url('/images/arrow_left_hover.png')
+
+  .right
+    display: block
+    background-image: url('/images/arrow_right.png')
+    height: 35px
+    position: absolute
+    top: 60%
+    right: -10%
+    width: 20px
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+
+  .right:hover
+    background-image: url('/images/arrow_right_hover.png')
+
+
+#andre-santos
+  background: url('/images/team/andre_santos.jpg') no-repeat center fixed
+
+
+#hugo-marinho
+  background: url('/images/team/hugo_marinho.jpg') no-repeat center fixed
+
+
+#luis-zamith
+  background: url('/images/team/luis_zamith.jpg') no-repeat center fixed
+
+
+#miguel-regedor
+  background: url('/images/team/miguel_regedor.jpg') no-repeat center fixed
+
+
+#pedro-pereira
+  background: url('/images/team/pedro_pereira.jpg') no-repeat center fixed
+
+
+#roberto-machado
+  background: url('/images/team/roberto_machado.jpg') no-repeat center fixed

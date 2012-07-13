@@ -1,0 +1,143 @@
+<%= erb :_head %>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="/" id="header-logo" class="logo">Group Buddies</a>
+
+      <nav>
+        <ul>
+          <li><a id="nav-home" href="#">Home</a></li>
+          <li><a id="nav-who-we-are" href="#">Who we are</a></li>
+          <li><a id="nav-what-we-do" href="#">What we do</a></li>
+          <li><a id="nav-what-we-did" href="#">What we did</a></li>
+          <li><a id="nav-hire-us" href="#">Hire us</a></li>
+          <li><a id="nav-contact-us" href="#">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <span id="slogan">Connect. Collaborate. Improve.</span>
+    </div>
+  </header>
+
+  <section id="home">
+    <div class="wrapper">
+      <h1>Group Buddies.</h1>
+      <p>We collaborate.</p>
+      <p>Your business improves.</p>
+
+      <a href="#" id="arrow"></a>
+    </div>
+  </section>
+
+  <section id="who-we-are">
+    <div class="wrapper">
+      <h1>Hello!</h1>
+      <p>We're a young team of self-confessed coffee lovers from northern Portugal.</p>
+      <p>When we're not drinking coffee, we're busy creating beautiful and functional Web sites.</p>
+      <p>We also do a pretty good job in establishing your company's visual identity.</p>
+      <p>Want to meet the team? <span>Group Buddies</span> is:</p>
+      <ul id="team-list">
+        <li><a data-name="andre" href="/team/andre-santos">André Santos, Systems Administrator</a></li>
+        <li><a data-name="hugo" href="/team/hugo-marinho">Hugo Marinho, Software Developer</a></li>
+        <li><a data-name="luis" href="/team/luis-zamith">Luís Zamith, Backend Developer</a></li>
+        <li><a data-name="miguel" href="/team/miguel-regedor">Miguel Regedor, Backend Developer</a></li>
+        <li><a data-name="pedro" href="/team/pedro-pereira">Pedro Pereira, Frontend and Backend Developer</a></li>
+        <li><a data-name="roberto" href="/team/roberto-machado">Roberto Machado, Chief Executive Officer</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="what-we-do">
+    <div class="wrapper">
+      <h1>Did we mention that we absolutely <span>love</span> what we do?</h1>
+      <ul>
+        <li>
+          <h2>Corporate Identity</h2>
+          <p>Your identity is more than a logo. We can help you to effectively communicate your company's values by creating the right identity for you.</p>
+        </li>
+        <li>
+          <h2>Web Development</h2>
+          <p>We love the Web. We take pride in crafting beautiful designs on top of intuitive user interfaces in order to make your Web presence fun and profitable.</p>
+        </li>
+        <li>
+          <h2>Products</h2>
+          <p>Collaboration and communication are two key factors in the success of any organization. Our Web apps can further assist you in reaching your goal.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="what-we-did">
+    <div class="wrapper">
+      <h1>Some of the stuff we've done before:</h1>
+
+      <ul>
+        <li class="cbfp thumbnail"><a href="/portfolio/cbfp"><span class="name">CBFP</span> <span class="info">Web site for a Biology research center.</span></a></li>
+        <li class="yme thumbnail"><a href="/portfolio/yme"><span class="name">Young Minho Enterprise</span> <span class="info">Web site for a junior consulting firm.</span></a></li>
+        <li class="dia-do-estudante thumbnail"><a href="/portfolio/dia-do-estudante"><span class="name">Dia do Estudante</span> <span class="info">Web site for the celebration of the official Portuguese student day.</span></a></li>
+        <li class="cesium thumbnail"><a href="/portfolio/cesium"><span class="name">CeSIUM</span> <span class="info">Web site for a computer science student's union.</span></a></li>
+        <li class="atreve-te thumbnail"><a href="/portfolio/atreve-te"><span class="name">Atreve-te</span> <span class="info">Web site for a contest of business ideas.</span></a></li>
+        <li class="nemum thumbnail"><a href="/portfolio/nemum"><span class="name">NEMUM</span> <span class="info">Web site for a medicine student's union.</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="hire-us">
+    <div class="wrapper">
+      <h1>We'd love to hear from <span>you</span>.</h1>
+      <p>Lets have a chat, we're quite the friendly bunch.</p>
+
+      <form>
+        <ul>
+          <li>
+            <input name=name type=text placeholder="Your name" required>
+          </li><li>
+            <input name=email type=email placeholder="Your email" required>
+          </li><li>
+            <textarea name=address placeholder="Your message" required></textarea>
+          </li>
+        </ul>
+
+        <button type=submit>Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrapper">
+      <h1>Thanks for visiting!</h1>
+
+      <a href="/" class="logo">Group Buddies</a>
+
+      <section class="contact-us">
+        <h3>Contact us</h3>
+        <ul>
+          <li class="email">contact@groupbuddies.com</li>
+          <li class="phone">+351 914 007 128</li>
+          <li class="address">Braga, Portugal</li>
+        </ul>
+      </section>
+
+      <section class="connect-with-us">
+        <h3>Connect with us</h3>
+        <ul>
+          <li class="linkedin"><a href="http://www.linkedin.com/company/group-buddies">LinkedIn</a></li>
+          <li class="twitter"><a href="http://twitter.com/groupbuddies">Twitter</a></li>
+          <li class="facebook"><a href="http://www.facebook.com/groupbuddies">Facebook</a></li>
+        </ul>
+      </section>
+
+      <section class="subscribe-to-us">
+        <h3>Subscribe to us</h3>
+        <form>
+          <input type=email placeholder="Your email"></input>
+          <button>Add to Newsletter</button>
+        </form>
+      </section>
+
+      <p class="copyright-info">© <%= Time.now.year %> <a href="http://www.groupbuddies.com">Group Buddies</a>. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

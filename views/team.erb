@@ -1,0 +1,78 @@
+<%= erb :_head %>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="/" id="header-logo" class="logo">Group Buddies</a>
+
+      <nav>
+        <ul>
+          <li><a id="nav-home" href="/">Back to home</a></li>
+          <li><a id="nav-andre" href="#">André</a></li>
+          <li><a id="nav-hugo" href="#">Hugo</a></li>
+          <li><a id="nav-luis" href="#">Luís</a></li>
+          <li><a id="nav-miguel" href="#">Miguel</a></li>
+          <li><a id="nav-pedro" href="#">Pedro</a></li>
+          <li><a id="nav-roberto" href="#">Roberto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="andre-santos" class="team-member <%= @member != 'andre-santos' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>André Santos</h1>
+      <h2>Systems Administrator</h2>
+      <p>Mostly due to his Perl and bash skills, he expects his tombstone to read "Here lies the ultimate command-line ninja".</p>
+      <p>A firm believer in the Open Source software philosophy, his role in Group Buddies is to manage a flock of servers which host the team's ideas.</p>
+      <p>Apart from going into the Matrix, he enjoys practicing judo and backpacking around the world.</p>
+
+      <a href="#" class="left"></a>
+      <a href="#" class="right"></a>
+    </div>
+  </section>
+
+  <section id="hugo-marinho" class="team-member <%= @member != 'hugo-marinho' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>Hugo Marinho</h1>
+      <h2>Software Developer</h2>
+      <p>Started off doing freelance development and graphics design at a young age, now focusing more on Web Development.</p>
+      <p>With an appetite for new challenges, he found in Group Buddies the opportunity to take on different projects with a talented team.</p>
+      <p>Loves practicing Taekwondo and entertaining his neighbors with his dubious guitar playing. Amps to 11.</p>
+    </div>
+  </section>
+
+  <section id="luis-zamith" class="team-member <%= @member != 'luis-zamith' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>Luís Zamith</h1>
+      <h2>Backend Developer</h2>
+      <p>A geek at heart. Got in touch with Web development while finishing his graduation and since then, he has never stopped loving it and is constantly trying to learn more.</p>
+      <p>Luckily, he found a group of people who shared the same passion for building reliable and beautiful products, and with whom he co-founded Group Buddies.</p>
+      <p>Apart from Web development, another great passion of his is doing sports. He plays basketball almost daily and goes skiing whenever he can.</p>
+    </div>
+  </section>
+
+  <section id="miguel-regedor" class="team-member <%= @member != 'miguel-regedor' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>Miguel Regedor</h1>
+      <h2>Backend Developer</h2>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="pedro-pereira" class="team-member <%= @member != 'pedro-pereira' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>Pedro Pereira</h1>
+      <h2>Frontend and Backend Developer</h2>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="roberto-machado" class="team-member <%= @member != 'roberto-machado' ? 'hidden' : '' %>">
+    <div class="wrapper">
+      <h1>Roberto Machado</h1>
+      <h2>Chief Executive Officer</h2>
+      <p></p>
+    </div>
+  </section>
+</body>

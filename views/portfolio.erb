@@ -1,0 +1,79 @@
+<%= erb :_head %>
+
+<body>
+  <header>
+    <div class="wrapper">
+      <a href="/" id="header-logo" class="logo">Group Buddies</a>
+
+      <nav>
+        <ul>
+          <li><a id="nav-home" href="/">Back to home</a></li>
+          <li><a id="nav-cbfp" href="#">CBFP</a></li>
+          <li><a id="nav-yme" href="#">YME</a></li>
+          <li><a id="nav-de" href="#">Dia do Estudante</a></li>
+          <li><a id="nav-cesium" href="#">CeSIUM</a></li>
+          <li><a id="nav-atreve-te" href="#">Atreve-te</a></li>
+          <li><a id="nav-nemum" href="#">NEMUM</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <section id="cbfp" class="project <%= @name != 'cbfp' ? 'hidden' : '' %>">
+      <a href="http://www.cbfp.uminho.pt" title="Visit Web site"><h1>Centro de Biologia Funcional de Plantas</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/cbfp_screenshot.jpg" alt="Centro de Biologia Funcional de Plantas">
+    </section>
+
+    <section id="yme" class="project <%= @name != 'yme' ? 'hidden' : '' %>">
+      <a href="http://www.yme.groupbuddies.com/" title="Visit Web site"><h1>Young Minho Enterprise</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/yme_screenshot.jpg" alt="Young Minho Enterprise">
+    </section>
+
+    <section id="dia-do-estudante" class="project <%= @name != 'dia-do-estudante' ? 'hidden' : '' %>">
+      <a href="http://diadoestudante.com" title="Visit Web site"><h1>Dia do Estudante</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/dia_screenshot.jpg" alt="Dia do Estudante">
+    </section>
+
+    <section id="cesium" class="project <%= @name != 'cesium' ? 'hidden' : '' %>">
+      <a href="http://www.cesium.di.uminho.pt" title="Visit Web site"><h1>Centro de Estudantes de Eng. de Sistemas e Informática da Universidade do Minho</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/ces_screenshot.jpg" alt="Centro de Estudantes de Eng. de Sistemas e Informática da Universidade do Minho">
+    </section>
+
+    <section id="atreve-te" class="project <%= @name != 'atreve-te' ? 'hidden' : '' %>">
+      <a href="http://atrevete.eu" title="Visit Web site"><h1>Atreve-te 2012 - Concurso de Ideias de Negócio</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/atr_screenshot.jpg" alt="Atreve-te 2012 - Concurso de Ideias de Negócio">
+    </section>
+
+    <section id="nemum" class="project <%= @name != 'nemum' ? 'hidden' : '' %>">
+      <a href="http://www.nemum.com" title="Visit Web site"><h1>Núcleo de Estudantes de Medicina da Universidade do Minho</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/nem_screenshot.jpg" alt="Núcleo de Estudantes de Medicina da Universidade do Minho">
+    </section>
+
+    <p id="copyright">© <%= Time.now.year %> Group Buddies. All rights reserved.</p>
+  </div>
+</body>
