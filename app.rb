@@ -20,8 +20,7 @@ get '/' do
   erb :index
 end
 
-get '/team/:member' do
-  @member = params[:member]
+get '/team' do
   @stylesheet_folder = '/stylesheets/team'
 
   erb :team
