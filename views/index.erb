@@ -38,12 +38,12 @@
       <p>We also do a pretty good job in establishing your company's visual identity.</p>
       <p>Want to meet the team? <span>Group Buddies</span> is:</p>
       <ul id="team-list">
-        <li><a data-name="andre" href="/team/andre-santos">André Santos, Systems Administrator</a></li>
-        <li><a data-name="hugo" href="/team/hugo-marinho">Hugo Marinho, Software Developer</a></li>
-        <li><a data-name="luis" href="/team/luis-zamith">Luís Zamith, Backend Developer</a></li>
-        <li><a data-name="miguel" href="/team/miguel-regedor">Miguel Regedor, Backend Developer</a></li>
-        <li><a data-name="pedro" href="/team/pedro-pereira">Pedro Pereira, Frontend and Backend Developer</a></li>
-        <li><a data-name="roberto" href="/team/roberto-machado">Roberto Machado, Chief Executive Officer</a></li>
+        <li><a data-name="andre" href="/team">André Santos, Systems Administrator</a></li>
+        <li><a data-name="hugo" href="/team">Hugo Marinho, Software Developer</a></li>
+        <li><a data-name="luis" href="/team">Luís Zamith, Backend Developer</a></li>
+        <li><a data-name="miguel" href="/team">Miguel Regedor, Backend Developer</a></li>
+        <li><a data-name="pedro" href="/team">Pedro Pereira, Frontend and Backend Developer</a></li>
+        <li><a data-name="roberto" href="/team">Roberto Machado, Chief Executive Officer</a></li>
       </ul>
     </div>
   </section>
@@ -73,12 +73,12 @@
       <h1>Some of the stuff we've done before:</h1>
 
       <ul>
-        <li class="cbfp thumbnail"><a href="/portfolio/cbfp"><span class="name">CBFP</span> <span class="info">Web site for a Biology research center.</span></a></li>
-        <li class="yme thumbnail"><a href="/portfolio/yme"><span class="name">Young Minho Enterprise</span> <span class="info">Web site for a junior consulting firm.</span></a></li>
-        <li class="dia-do-estudante thumbnail"><a href="/portfolio/dia-do-estudante"><span class="name">Dia do Estudante</span> <span class="info">Web site for the celebration of the official Portuguese student day.</span></a></li>
-        <li class="cesium thumbnail"><a href="/portfolio/cesium"><span class="name">CeSIUM</span> <span class="info">Web site for a computer science student's union.</span></a></li>
-        <li class="atreve-te thumbnail"><a href="/portfolio/atreve-te"><span class="name">Atreve-te</span> <span class="info">Web site for a contest of business ideas.</span></a></li>
-        <li class="nemum thumbnail"><a href="/portfolio/nemum"><span class="name">NEMUM</span> <span class="info">Web site for a medicine student's union.</span></a></li>
+        <li class="cbfp thumbnail"><a href="/portfolio"><span class="name">CBFP</span> <span class="info">Web site for a Biology research center.</span></a></li>
+        <li class="yme thumbnail"><a href="/portfolio"><span class="name">Young Minho Enterprise</span> <span class="info">Web site for a junior consulting firm.</span></a></li>
+        <li class="dia-do-estudante thumbnail"><a href="/portfolio"><span class="name">Dia do Estudante</span> <span class="info">Web site for the celebration of the official Portuguese student day.</span></a></li>
+        <li class="cesium thumbnail"><a href="/portfolio"><span class="name">CeSIUM</span> <span class="info">Web site for a computer science student's union.</span></a></li>
+        <li class="atreve-te thumbnail"><a href="/portfolio"><span class="name">Atreve-te</span> <span class="info">Web site for a contest of business ideas.</span></a></li>
+        <li class="nemum thumbnail"><a href="/portfolio"><span class="name">NEMUM</span> <span class="info">Web site for a medicine student's union.</span></a></li>
       </ul>
     </div>
   </section>
@@ -88,14 +88,14 @@
       <h1>We'd love to hear from <span>you</span>.</h1>
       <p>Lets have a chat, we're quite the friendly bunch.</p>
 
-      <form>
+      <form action="/contact" method="post">
         <ul>
           <li>
-            <input name=name type=text placeholder="Your name" required>
+            <input name="name" type="text" placeholder="Your name" required>
           </li><li>
-            <input name=email type=email placeholder="Your email" required>
+            <input name="email" type="email" placeholder="Your email" required>
           </li><li>
-            <textarea name=address placeholder="Your message" required></textarea>
+            <textarea name="message" placeholder="Your message" required></textarea>
           </li>
         </ul>
 
@@ -130,9 +130,9 @@
 
       <section class="subscribe-to-us">
         <h3>Subscribe to us</h3>
-        <form>
-          <input type=email placeholder="Your email"></input>
-          <button>Add to Newsletter</button>
+        <form id="newsletter" action="/add_to_newsletter" method="post">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit">Add to Newsletter</button>
         </form>
       </section>
 

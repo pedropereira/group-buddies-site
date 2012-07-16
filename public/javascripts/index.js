@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
 
   var first_arrow = {
     scroll_to_page: function(){
-      $("body").animate({scrollTop:$("#who-we-are").offset().top - 50}, 1000);
+      $("body").animate({scrollTop:$("#who-we-are").offset().top - 40}, 1000);
     },
 
     init : function(){
@@ -64,12 +64,12 @@ jQuery(document).ready(function($) {
   };
 
   var header_nav = {
-    home: $("#home").offset().top - 80,
-    who_we_are: $("#who-we-are").offset().top - 80,
-    what_we_do: $("#what-we-do").offset().top - 80,
-    what_we_did: $("#what-we-did").offset().top - 80,
-    contact: $("#hire-us").offset().top - 80,
-    footer: $("footer").offset().top - 80,
+    home: $("#home").offset().top - 40,
+    who_we_are: $("#who-we-are").offset().top - 40,
+    what_we_do: $("#what-we-do").offset().top - 40,
+    what_we_did: $("#what-we-did").offset().top - 40,
+    contact: $("#hire-us").offset().top - 40,
+    footer: $("footer").offset().top - 40,
 
     add_class_to_one: function(classable_item,class_name){
       $("a."+class_name).each(function(){

@@ -1,6 +1,5 @@
 .wrapper
   margin: auto
-  position: relative
   width: 75.9% // 960px @ 1280px
 
 
@@ -71,34 +70,27 @@ nav
   p
     margin-top: 2%
 
-  .left
+  .arrow
     display: block
-    background-image: url('/images/arrow_left.png')
     height: 35px
     position: absolute
-    top: 60%
-    left: -10%
+    top: 50%
     width: 20px
     -webkit-transition: all 0.2s ease-in-out
     -moz-transition: all 0.2s ease-in-out
     -o-transition: all 0.2s ease-in-out
     transition: all 0.2s ease-in-out
+
+  .left
+    background-image: url('/images/arrow_left.png')
+    left: 7%
 
   .left:hover
     background-image: url('/images/arrow_left_hover.png')
 
   .right
-    display: block
     background-image: url('/images/arrow_right.png')
-    height: 35px
-    position: absolute
-    top: 60%
-    right: -10%
-    width: 20px
-    -webkit-transition: all 0.2s ease-in-out
-    -moz-transition: all 0.2s ease-in-out
-    -o-transition: all 0.2s ease-in-out
-    transition: all 0.2s ease-in-out
+    right: 7%
 
   .right:hover
     background-image: url('/images/arrow_right_hover.png')
