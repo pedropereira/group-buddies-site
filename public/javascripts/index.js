@@ -2,6 +2,23 @@ jQuery.noConflict();
 
 jQuery(document).ready(function($) {
 
+  // Newsletter
+  $('.subscribe-to-us').on('click', 'button', function() {
+    var email = $(".subscribe-to-us input").val();
+    var data = 'email='+ email;
+
+    $.ajax({
+      type: "POST",
+      url: "/newsletter",
+      data: data,
+      success: function() {
+        $('.subscribe-to-us button').text('Added!');
+      }
+    });
+
+    return false;
+  });
+
   var header_logo = {
     change_at: $("#who-we-are").offset().top - 700,
     from: "logo",

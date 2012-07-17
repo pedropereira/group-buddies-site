@@ -41,10 +41,6 @@ nav
       -o-transition: color 0.2s ease-in-out
       transition: color 0.2s ease-in-out
 
-    a.current
-      background-image: url('/images/menu.png')
-      border-radius: 7px
-
   li:first-child
     margin-left: 0
 
@@ -82,18 +78,20 @@ nav
     transition: all 0.2s ease-in-out
 
   .left
-    background-image: url('/images/arrow_left.png')
+    background-image: url('/images/arrow_left_hover.png')
     left: 7%
+    opacity: 0.4
 
   .left:hover
-    background-image: url('/images/arrow_left_hover.png')
+    opacity: 1
 
   .right
-    background-image: url('/images/arrow_right.png')
+    background-image: url('/images/arrow_right_hover.png')
     right: 7%
+    opacity: 0.4
 
   .right:hover
-    background-image: url('/images/arrow_right_hover.png')
+    opacity: 1
 
 
 #andre

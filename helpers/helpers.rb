@@ -9,6 +9,10 @@ helpers do
     end
   end
 
+  def email_exists?(filename, email)
+    File.readlines(filename).grep(/#{email}/).any?
+  end
+
   def link_to_stylesheet(filename)
     "<link rel=\"stylesheet\" type=\"text/css\" href=#{filename}>"
   end

@@ -29,10 +29,14 @@ get '/' do
 end
 
 
-post '/add_to_newsletter' do
-  add_to_newsletter('newsletter.txt', params[:email])
+post '/newsletter' do
+  email_regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
-  redirect '/'
+  if params[:email] =~ email_regex and !email_exists?('newsletter.txt', params[:email])
+    add_to_newsletter('newsletter.txt', params[:email])
+  end
+
+  redirect to('/') unless request.xhr?
 end
 
 
@@ -42,7 +46,7 @@ post '/contact' do
             :subject => '[groupbuddies.com] Message from ' + params[:name],
             :body => params[:message]
 
-  redirect '/'
+  redirect to('/') unless request.xhr?
 end
 
 
@@ -58,7 +62,7 @@ end
 
 get '/portfolio' do
   @stylesheets = ['/stylesheets/reset.css', '/stylesheets/portfolio/structure.css', '/stylesheets/portfolio/typography.css']
-  @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/preloadCssImages.jQuery_v5.js']
+  @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/portfolio.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
   erb :portfolio
 end

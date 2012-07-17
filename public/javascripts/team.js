@@ -2,7 +2,7 @@ jQuery.noConflict();
 
 jQuery(document).ready(function($) {
 
-  var the_team = {
+  var team = {
     current_member: "andre",
 
     set_current_class: function(name){
@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
       });
 
       $("#nav-"+name).addClass("current");
-      the_team.current_member = name;
+      team.current_member = name;
     },
 
     nav_click: function(){
@@ -19,12 +19,12 @@ jQuery(document).ready(function($) {
         var section_id = $(this).attr("id").replace("nav-","");
 
         if(section_id != 'home') {
-          $("#"+the_team.current_member).fadeOut(600);
+          $("#"+team.current_member).fadeOut(600);
           $("#"+section_id).fadeIn(600);
         }
         else { window.location("/"); }
 
-        the_team.set_current_class(section_id);
+        team.set_current_class(section_id);
         event.preventDefault();
       });
     },
@@ -38,20 +38,20 @@ jQuery(document).ready(function($) {
           var section_id = $(this).parent().parent().next().attr("id");
         }
 
-        $("#"+the_team.current_member).fadeOut(600);
+        $("#"+team.current_member).fadeOut(600);
         $("#"+section_id).stop().fadeIn(600);
 
-        the_team.set_current_class(section_id);
+        team.set_current_class(section_id);
         event.preventDefault();
       });
     },
 
     init: function(){
-      the_team.set_current_class(the_team.current_member);
-      the_team.nav_click();
-      the_team.arrow_click();
+      team.set_current_class(team.current_member);
+      team.nav_click();
+      team.arrow_click();
     }
   };
 
-  the_team.init();
+  team.init();
 });
