@@ -19,7 +19,7 @@
     </div>
   </header>
 
-  <section id="andre" class="team-member">
+  <section id="andre" class="team-member <%= @member != 'andre' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>André Santos</h1>
       <h2>Systems Administrator</h2>
@@ -32,7 +32,7 @@
     </div>
   </section>
 
-  <section id="hugo" class="team-member hidden">
+  <section id="hugo" class="team-member <%= @member != 'hugo' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>Hugo Marinho</h1>
       <h2>Software Developer</h2>
@@ -46,7 +46,7 @@
     </div>
   </section>
 
-  <section id="luis" class="team-member hidden">
+  <section id="luis" class="team-member <%= @member != 'luis' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>Luís Zamith</h1>
       <h2>Backend Developer</h2>
@@ -60,7 +60,7 @@
     </div>
   </section>
 
-  <section id="miguel" class="team-member hidden">
+  <section id="miguel" class="team-member <%= @member != 'miguel' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>Miguel Regedor</h1>
       <h2>Technical Advisor</h2>
@@ -74,7 +74,7 @@
     </div>
   </section>
 
-  <section id="pedro" class="team-member hidden">
+  <section id="pedro" class="team-member <%= @member != 'pedro' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>Pedro Pereira</h1>
       <h2>Frontend and Backend Developer</h2>
@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <section id="roberto" class="team-member hidden">
+  <section id="roberto" class="team-member <%= @member != 'roberto' ? 'hidden' : '' %>">
     <div class="wrapper">
       <h1>Roberto Machado</h1>
       <h2>Chief Executive Officer</h2>

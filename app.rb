@@ -30,7 +30,7 @@ end
 
 
 post '/newsletter' do
-  email_regex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+  email_regex = /^[a-zA-Z0-9\_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
   if params[:email] =~ email_regex and !email_exists?('newsletter.txt', params[:email])
     add_to_newsletter('newsletter.txt', params[:email])
@@ -54,7 +54,8 @@ get '/team' do
   @stylesheets = ['/stylesheets/reset.css', '/stylesheets/team/structure.css', '/stylesheets/team/typography.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/team.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
-  @member = params[:member]
+  @member = (params[:member]) ? params[:member] : "andre"
+  p @member
 
   erb :team
 end

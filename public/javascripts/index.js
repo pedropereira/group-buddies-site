@@ -159,7 +159,7 @@ jQuery(document).ready(function($) {
       if(current_page_pos >= 1)
       {
         var new_page_name = key_navigation.page_order[current_page_pos - 1];
-        var new_page_offset = $("#"+new_page_name).offset().top - 50;
+        var new_page_offset = $("#"+new_page_name).offset().top - 30;
         $("body,html").stop().animate({scrollTop: new_page_offset}, 500);
       }
       else
@@ -176,7 +176,7 @@ jQuery(document).ready(function($) {
           new_page_name = "#"+new_page_name;
         else
           new_page_name = "footer";
-        var new_page_offset = $(new_page_name).offset().top - 50;
+        var new_page_offset = $(new_page_name).offset().top - 30;
         $("body,html").stop().animate({scrollTop: new_page_offset}, 500);
       }
       else
@@ -190,6 +190,8 @@ jQuery(document).ready(function($) {
           key_navigation.up_action(current_page,event);
         else if(event.keyCode === 40 && current_page != "contact-us") // Down arrow
           key_navigation.down_action(current_page,event);
+
+        event.preventDefault();
       });
     },
 

@@ -3,7 +3,7 @@ jQuery.noConflict();
 jQuery(document).ready(function($) {
 
   var team = {
-    current_member: "andre",
+    current_member: window.location.search.slice(8) || "andre",
 
     set_current_class: function(name){
       $("a.current").each(function(){
@@ -31,11 +31,12 @@ jQuery(document).ready(function($) {
 
     arrow_click: function() {
       $(".arrow").on("click",function(event){
+        var section_id = null;
         if($(this).hasClass("left")) {
-          var section_id = $(this).parent().parent().prev().attr("id");
+          section_id = $(this).parent().parent().prev().attr("id");
         }
         else if($(this).hasClass("right")) {
-          var section_id = $(this).parent().parent().next().attr("id");
+          section_id = $(this).parent().parent().next().attr("id");
         }
 
         $("#"+team.current_member).fadeOut(600);
