@@ -187,11 +187,15 @@ jQuery(document).ready(function($) {
       $(document).on("keydown", function(event){
         var current_page = $("nav a.current").attr("id").replace("nav-","");
         if(event.keyCode === 38 && current_page != "home") // Up arrow
+        {
           key_navigation.up_action(current_page,event);
+          event.preventDefault();
+        }
         else if(event.keyCode === 40 && current_page != "contact-us") // Down arrow
+        {
           key_navigation.down_action(current_page,event);
-
-        event.preventDefault();
+          event.preventDefault();
+        }
       });
     },
 

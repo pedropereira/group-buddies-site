@@ -55,7 +55,6 @@ get '/team' do
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/team.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
   @member = (params[:member]) ? params[:member] : "andre"
-  p @member
 
   erb :team
 end
@@ -64,6 +63,8 @@ end
 get '/portfolio' do
   @stylesheets = ['/stylesheets/reset.css', '/stylesheets/portfolio/structure.css', '/stylesheets/portfolio/typography.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/portfolio.js', '/javascripts/preloadCssImages.jQuery_v5.js']
+
+  @name = (params[:name]) ? params[:name] : "cbfp"
 
   erb :portfolio
 end

@@ -14,6 +14,17 @@ jQuery(document).ready(function($) {
       team.current_member = name;
     },
 
+    pop_state: function(){
+      $(window).bind('popstate', function(event){
+        if(event.originalEvent.state)
+        {
+          $('#' + team.current_member).fadeOut(600);
+          $('#' + event.originalEvent.state.previous).fadeIn(600);
+          team.set_current_class(event.originalEvent.state.previous);
+        }
+      });
+    },
+
     nav_click: function(){
       $("nav").on("click","a",function(event){
         var section_id = $(this).attr("id").replace("nav-","");
@@ -21,6 +32,7 @@ jQuery(document).ready(function($) {
         if(section_id != 'home') {
           $("#"+team.current_member).fadeOut(600);
           $("#"+section_id).fadeIn(600);
+          window.history.pushState({previous: section_id},"","/team?member="+section_id);
         }
         else { window.location("/"); }
 
@@ -51,6 +63,7 @@ jQuery(document).ready(function($) {
       team.set_current_class(team.current_member);
       team.nav_click();
       team.arrow_click();
+      team.pop_state();
     }
   };
 
