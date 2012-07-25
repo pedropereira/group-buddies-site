@@ -54,11 +54,14 @@ nav
   background-color: #0091DA
   height: 720px
 
+  h1, p
+    padding-left: 15.625%
+
   h1
-    padding: 280px 15.625% 0
+    padding-top: 280px
 
   p
-    padding: 5px 15.625% 0
+    padding-top: 5px
 
   #arrow
     background-image: url('/images/arrow.png')
@@ -164,10 +167,11 @@ nav
     padding-top: 100px
 
   .thumbnail
+    background-size: 100%
     display: inline-block
     height: 136px
     margin-bottom: 80px
-    margin-left: 22px
+    margin-right: 2%
     vertical-align: top
     width: 220px
     -webkit-transition: background-image 0.2s ease-in-out
@@ -175,8 +179,8 @@ nav
     -o-transition: background-image 0.2s ease-in-out
     transition: background-image 0.2s ease-in-out
 
-  .thumbnail:first-child, .thumbnail:nth-child(5)
-    margin-left: 0
+  .thumbnail:last-child, .thumbnail:nth-child(4)
+    margin-right: 0
 
   a
     display: inline-block
@@ -228,8 +232,9 @@ nav
 #hire-us
   background-color: #0091DA
   background-image: url('/images/big_envelope.png')
-  background-position: -30% 240%
+  background-position: -30% 270%
   background-repeat: no-repeat
+  background-size: 60%
   height: 700px
   position: relative
 
@@ -241,8 +246,7 @@ nav
     padding-bottom: 60px
 
   form
-    float: right
-    width: 495px
+    text-align: right
 
     li
       display: inline-block
@@ -251,12 +255,13 @@ nav
       background-color: #323232
       float: right
       padding: 10px 20px
-      margin: 0 5px 0 0
+      margin: 0
 
     button:hover
       background-color: #F6F6F8
 
     input
+      margin-left: 15px
       width: 200px
 
     textarea
@@ -268,7 +273,6 @@ nav
     input, textarea
       background-color: #F6F6F8
       margin-bottom: 15px
-      margin-left: 15px
       padding: 15px
 
 
@@ -277,6 +281,7 @@ footer
   background-image: url('/images/pt.png')
   background-position: 100% 60%
   background-repeat: no-repeat
+  background-size: 30%
   height: 700px
 
   h1
@@ -285,19 +290,6 @@ footer
 
   h3
     padding-bottom: 5px
-
-  .logo
-    background-image: url('/images/logo_bk.png')
-    border-bottom: none
-    height: 176px
-    margin-left: 330px
-    margin-top: 80px
-    padding-bottom: 0
-    position: absolute
-    width: 250px
-
-  .logo:hover
-    border-bottom: none
 
   .contact-us
     display: inline-block
@@ -373,5 +365,160 @@ footer
 
 
 @media (max-width: 768px)
+  header
+
+    .logo
+      background-image: url('/images/icon.png')
+      background-size: 100%
+      display: block
+      height: 55px
+      margin: auto
+      width: 55px
+ 
+    #slogan
+      font-size: 0.75em
+      margin: 10px 0.6em 0
+    
+    nav
+      font-size: 0.7em
+      margin: 10px 0
+
+      li
+        margin-left: 0
+      a
+        padding: 0.8em
+
+
   section#home
-    font-size: 2em
+    font-size: 2.6em
+    height: 550px
+
+    h1, p
+      padding-left: 22.625%
+
+    h1
+      padding-top: 220px
+
+    p
+      padding-top: 5px
+
+    #arrow
+      margin: 120px auto 0
+
+
+  #who-we-are
+    background-position: -20% 50%
+    height: 600px
+
+    h1
+      font-size: 2.6em !important
+      padding-top: 50px
+
+    h1, p, ul
+      padding-left: 45%
+
+    p
+      font-size: 0.9em
+
+    ul
+      font-size: 0.8em
+
+    li
+      margin-left: 5%
+
+    .member-thumbnail
+      background-size: 100%
+      padding-top: 80px
+      width: 70px
+
+
+  #what-we-do
+    background-position: 85% 88%
+    background-size: 35%
+    height: 600px
+
+    h1
+      font-size: 2.2em !important
+      padding-bottom: 50px
+      padding-top: 60px
+      width: 100%
+
+    li h2
+      font-size: 1em
+      margin-bottom: 2%
+
+    p
+      font-size: 0.85em
+
+    li
+      margin-bottom: 30px
+
+
+  #what-we-did
+    height: 600px
+
+    h1
+      font-size: 2.2em !important
+      padding-bottom: 60px
+      padding-top: 60px
+
+    .thumbnail
+      height: 108px
+      margin-bottom: 90px
+      width: 175px
+
+    .thumbnail:nth-child(3)
+      margin-right: 0
+
+    .thumbnail:nth-child(4)
+      margin-right: 2%
+
+    .name
+      display: inline-block
+      margin: 70% 0 2%
+
+    .info
+      font-size: 0.75em !important
+
+
+  #hire-us
+    background-position: -40% 155%
+    background-size: 60%
+    height: 550px
+
+    h1, p
+      font-size: 2.2em !important
+
+    h1
+      padding-top: 60px
+
+    form
+
+      button
+        font-size: 0.9em
+
+      input, textarea
+        font-size: 0.8em
+
+      input
+        width: 127px
+
+      textarea
+        height: 140px
+        width: 300px
+
+
+  footer
+    background-size: 40%
+    height: 600px
+
+    h1
+      padding-bottom: 10px
+      padding-top: 60px
+
+    .contact-us
+      display: inline-block
+      margin-top: 300px
+
+    .subscribe-to-us
+      margin-top: 300px
