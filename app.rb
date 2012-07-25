@@ -2,6 +2,16 @@ require 'pony'
 require 'sass'
 require 'sinatra'
 
+# require_relative does not exist in ruby 1.8.7
+# This is a fallback -- http://stackoverflow.com/a/4718414/951432
+unless Kernel.respond_to?(:require_relative)
+  module Kernel
+    def require_relative(path)
+      require File.join(File.dirname(caller[0]), path.to_str)
+    end
+  end
+end
+
 require_relative 'helpers/helpers'
 
 set :sass, :style => :compressed
@@ -54,7 +64,7 @@ get '/team' do
   @stylesheets = ['/stylesheets/reset.css', '/stylesheets/team/structure.css', '/stylesheets/team/typography.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/team.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
-  @member = params[:member]
+  @member = (params[:member]) ? params[:member] : "andre"
 
   erb :team
 end
@@ -63,6 +73,8 @@ end
 get '/portfolio' do
   @stylesheets = ['/stylesheets/reset.css', '/stylesheets/portfolio/structure.css', '/stylesheets/portfolio/typography.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/application.js', '/javascripts/portfolio.js', '/javascripts/preloadCssImages.jQuery_v5.js']
+
+  @name = (params[:name]) ? params[:name] : "cbfp"
 
   erb :portfolio
 end
