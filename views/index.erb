@@ -37,12 +37,42 @@
       <p>When we're not drinking coffee, we're busy creating beautiful and functional Web sites.</p>
       <p>We also do a pretty good job in establishing your company's visual identity.</p>
       <ul id="team-list">
-        <li><a data-name="andre" class="member-thumbnail" href="/team?member=andre">André Santos</a></li>
-        <li><a data-name="hugo" class="member-thumbnail" href="/team?member=hugo">Hugo Marinho</a></li>
-        <li><a data-name="luis" class="member-thumbnail" href="/team?member=luis">Luís Zamith</a></li>
-        <li><a data-name="miguel" class="member-thumbnail" href="/team?member=miguel">Miguel Regedor</a></li>
-        <li><a data-name="pedro" class="member-thumbnail" href="/team?member=pedro">Pedro Pereira</a></li>
-        <li><a data-name="roberto" class="member-thumbnail" href="/team?member=roberto">Roberto Machado</a></li>
+        <li class="member-thumbnail">
+          <a href="/team?member=andre">
+            <img src="/images/andre_thumbnail.png" alt="André Santos">
+            <span>André Santos</span>
+          </a>
+        </li>
+        <li class="member-thumbnail">
+          <a href="/team?member=hugo">
+            <img src="/images/hugo_thumbnail.png" alt="Hugo Marinho">
+            <span>Hugo Marinho</span>
+          </a>
+        </li>
+        <li class="member-thumbnail">
+          <a href="/team?member=luis">
+            <img src="/images/luis_thumbnail.png" alt="Luís Zamith">
+            <span>Luís Zamith</span>
+          </a>
+        </li>
+        <li class="member-thumbnail">
+          <a href="/team?member=miguel">
+            <img src="/images/miguel_thumbnail.png" alt="Miguel Regedor">
+            <span>Miguel Regedor</span>
+          </a>
+        </li>
+        <li class="member-thumbnail">
+          <a href="/team?member=pedro">
+            <img src="/images/pedro_thumbnail.png" alt="Pedro Pereira">
+            <span>Pedro Pereira</span>
+          </a>
+        </li>
+        <li class="member-thumbnail">
+          <a href="/team?member=roberto">
+            <img src="/images/roberto_thumbnail.png" alt="Roberto Machado">
+            <span>Roberto Machado</span>
+          </a>
+        </li>
       </ul>
     </div>
   </section>
@@ -88,16 +118,8 @@
       <p>Lets have a chat, we're quite the friendly bunch.</p>
 
       <form action="/contact" method="post">
-        <ul>
-          <li>
-            <input name="name" type="text" placeholder="Your name" required>
-          </li><li>
-            <input name="email" type="email" placeholder="Your email" required>
-          </li><li>
-            <textarea name="message" placeholder="Your message" required></textarea>
-          </li>
-        </ul>
-
+        <input name="name" type="text" placeholder="Your name" required><input name="email" type="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
         <button type=submit>Send</button>
       </form>
     </div>
@@ -110,18 +132,18 @@
       <section class="contact-us">
         <h3>Contact us</h3>
         <ul>
-          <li class="email">contact@groupbuddies.com</li>
-          <li class="phone">+351 914 007 128</li>
-          <li class="address">Braga, Portugal</li>
+          <li class="icon email">contact@groupbuddies.com</li>
+          <li class="icon phone">+351 914 007 128</li>
+          <li class="icon address">Braga, Portugal</li>
         </ul>
       </section>
 
       <section class="connect-with-us">
         <h3>Connect with us</h3>
         <ul>
-          <li class="linkedin"><a href="http://www.linkedin.com/company/group-buddies">LinkedIn</a></li>
-          <li class="twitter"><a href="http://twitter.com/groupbuddies">Twitter</a></li>
-          <li class="facebook"><a href="http://www.facebook.com/groupbuddies">Facebook</a></li>
+          <li class="icon linkedin"><a href="http://www.linkedin.com/company/group-buddies">LinkedIn</a></li>
+          <li class="icon twitter"><a href="http://twitter.com/groupbuddies">Twitter</a></li>
+          <li class="icon facebook"><a href="http://www.facebook.com/groupbuddies">Facebook</a></li>
         </ul>
       </section>
 

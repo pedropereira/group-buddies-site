@@ -28,8 +28,8 @@ jQuery(document).ready(function($) {
     change_to_lettering: function(){
       $("#header-logo").stop().animate({"opacity": "0"}, 300, function() {
         $(this).css({"background-image": "url('/images/logo_min.png')", "width": "190px"})
-          .animate({"opacity": "1"}, {queue: false, duration: 500})
-          .animate({"padding-bottom": "13px", "height": "33px"}, {duration: 500});
+          .animate({"opacity": "1"}, {queue: false, duration: 300})
+          .animate({"padding-bottom": "13px", "height": "45px"}, {duration: 300});
         $(this).css({"background-position": "0 12px"});
       });
       $("#slogan").fadeOut(300);
