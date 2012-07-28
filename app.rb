@@ -20,14 +20,14 @@ set :sass, :style => :compressed
 get '/stylesheets/:filename.css' do
   content_type 'text/css', :charset => 'utf-8'
   filename = "#{params[:filename]}"
-  sass filename.to_sym, :views => './views/stylesheets'
+  render :sass, filename.to_sym, :views => './views/stylesheets'
 end
 
 
 get '/stylesheets/:folder/:filename.css' do
   content_type 'text/css', :charset => 'utf-8'
   filename = "#{params[:filename]}"
-  sass filename.to_sym, :views => "./views/stylesheets/#{params[:folder]}"
+  render :sass, filename.to_sym, :views => "./views/stylesheets/#{params[:folder]}"
 end
 
 
