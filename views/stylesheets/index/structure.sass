@@ -98,7 +98,7 @@ nav
   height: 720px
 
   h1
-    padding-top: 8.4%
+    padding-top: 80px
 
   h1, p, ul
     padding-bottom: 3.2%
@@ -125,16 +125,17 @@ nav
 
 #what-we-do
   background-color: #F6F6F8
+  background-image: url('/images/circle.png')
+  background-position: 80% 60%
+  background-repeat: no-repeat
   height: 720px
 
   h1
     padding-bottom: 7.5%
-    padding-top: 11.5%
+    padding-top: 110px
 
   li
     margin-bottom: 2%
-
-  h1, li
     width: 50%
 
 
@@ -144,22 +145,20 @@ nav
 
   h1
     padding-bottom: 7.5%
-    padding-top: 10%
+    padding-top: 100px
 
   .thumbnail
+    background-size: 100%
+    background-repeat: no-repeat
     display: inline-block
     height: 136px
-    margin-bottom: 9%
-    margin-right: 2%
+    margin: 0 0.9% 9%
     vertical-align: top
-    width: 220px
+    width: 23%
     -webkit-transition: background-image 0.2s ease-in-out
     -moz-transition: background-image 0.2s ease-in-out
     -o-transition: background-image 0.2s ease-in-out
     transition: background-image 0.2s ease-in-out
-
-  .thumbnail:last-child, .thumbnail:nth-child(4)
-    margin-right: 0
 
   .cbfp
     background-image: url('/images/portfolio/cbfp.png')
@@ -199,7 +198,7 @@ nav
 
   .name
     display: inline-block
-    margin: 145px 0 5px
+    padding: 66% 0 3%
 
   .info
     display: block
@@ -214,10 +213,10 @@ nav
   height: 720px
 
   h1
-    padding-top: 10%
+    padding-top: 100px
 
   p
-    padding-bottom: 8%
+    padding-bottom: 11%
 
   form
     float: right
@@ -262,7 +261,7 @@ footer
   height: 700px
 
   h1
-    padding-top: 10%
+    padding-top: 100px
 
   section
     display: inline-block
@@ -324,3 +323,52 @@ footer
 // =============
 
 
+@media (max-width: 1100px)
+  body
+    font-size: 95% !important
+
+  #header-logo
+    background-size: 90%
+
+  nav li
+    margin-left: 0 !important
+
+  #slogan
+    margin-top: 0.8em
+
+  #hire-us
+    background-position: -60% 250% !important
+    background-size: 70% !important
+
+
+@media (max-width: 960px)
+  body
+    font-size: 90% !important
+
+  header
+    padding-bottom: 2.563% !important
+    padding-top: 2.563% !important
+
+  #header-logo
+    background-image: url('/images/icon.png') !important
+    background-position: 0 !important
+    background-size: 100% !important
+    height: 50px !important
+    width: 50px !important
+
+  nav
+    margin: 10px 0 15px
+
+  #slogan
+    margin-top: 0 !important
+
+  #hire-us
+    background-position: -100% 210% !important
+    background-size: 75% !important
+
+  footer
+    background-position: 110% 60% !important
+    background-size: 35% !important
+
+
+@media (max-width: 840px)
