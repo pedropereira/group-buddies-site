@@ -15,21 +15,20 @@ end
 require_relative 'helpers/helpers'
 
 set :sass, :style => :compressed
-set :static, true
 
 
-get '/stylesheets/:filename.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  filename = "#{params[:filename]}"
-  render :sass, filename.to_sym, :views => './views/stylesheets'
-end
+#get '/stylesheets/:filename.css' do
+#  content_type 'text/css', :charset => 'utf-8'
+#  filename = "#{params[:filename]}"
+#  render :sass, filename.to_sym, :views => './views/stylesheets'
+#end
 
 
-get '/stylesheets/:folder/:filename.css' do
-  content_type 'text/css', :charset => 'utf-8'
-  filename = "#{params[:filename]}"
-  render :sass, filename.to_sym, :views => "./views/stylesheets/#{params[:folder]}"
-end
+#get '/stylesheets/:folder/:filename.css' do
+#  content_type 'text/css', :charset => 'utf-8'
+#  filename = "#{params[:filename]}"
+#  render :sass, filename.to_sym, :views => "./views/stylesheets/#{params[:folder]}"
+#end
 
 
 get '/' do

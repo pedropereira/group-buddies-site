@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
     current: "logo",
 
     change_to_lettering: function(){
-      $("#header-logo").stop().animate({"opacity": "0"}, 300, function() {
+      $("#logo").stop().animate({"opacity": "0"}, 300, function() {
         $(this).css({"background-image": "url('/images/logo_min.png')", "width": "190px"})
           .animate({"opacity": "1"}, {queue: false, duration: 300})
           .animate({"padding-bottom": "13px", "height": "45px"}, {duration: 300});
@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     },
 
     change_to_logo: function(){
-      $("#header-logo").stop().animate({"opacity": "0"}, 300, function() {
+      $("#logo").stop().animate({"opacity": "0"}, 300, function() {
         $(this).css({"background-image": "url('/logo.png')", "background-position": "0", "padding-bottom": "0", "width": "130px"})
           .animate({"height": "92px"}, {duration: 300})
           .animate({"opacity": "1"}, {duration: 300});
@@ -72,8 +72,8 @@ jQuery(document).ready(function($) {
       $("body").animate({scrollTop:$("#who-we-are").offset().top - 40}, 1000);
     },
 
-    init : function(){
-      $("#arrow").on('click',function(event){
+    init : function() {
+      $("#arrow").on('click',function(event) {
         first_arrow.scroll_to_page();
         event.preventDefault();
       });
@@ -95,7 +95,35 @@ jQuery(document).ready(function($) {
       $(classable_item).addClass(class_name);
     },
 
-    current_page: function(){
+    change_to_select_menu: function() {
+      var window_width = $(window).width();
+      if(window_width <= 480) {
+
+        var navigation = $('nav').clone();
+
+        $('nav').html('<select></select>');
+        var select_menu = $('select');
+
+        $(navigation).children('ul').children('li').each(function() {
+          /* Get top-level link and text */
+          var href = $(this).children('a').attr('href');
+          var text = $(this).children('a').text();
+
+          /* Append this option to our "select" */
+          $(select_menu).append('<option value="'+href+'">'+ text +'</option>');
+        });
+
+        $('nav').html(select_menu);
+      }
+
+      /* When our select menu is changed, change the window location to match the value of the selected option. */
+      $(select_menu).change(function() {
+        location = this.options[this.selectedIndex].value;
+        this.options[this.selectedIndex].addClass('current');
+      });
+    },
+
+    current_page: function() {
       $(window).scroll(function(){
         if(window.pageYOffset >= header_nav.home && window.pageYOffset < header_nav.who_we_are)             // Intro
           header_nav.add_class_to_one("#nav-home","current");
@@ -185,7 +213,7 @@ jQuery(document).ready(function($) {
 
     up_or_down: function(){
       $(document).on("keydown", function(event){
-        var current_page = $("nav a.current").attr("id").replace("nav-","");
+        var current_page = $("nav .current").attr("id").replace("nav-","");
         if(event.keyCode === 38 && current_page != "home") // Up arrow
         {
           key_navigation.up_action(current_page,event);
@@ -206,6 +234,7 @@ jQuery(document).ready(function($) {
 
   header_logo.init();
   header_nav.init();
+  header_nav.change_to_select_menu();
   first_arrow.init();
   key_navigation.init();
 });
