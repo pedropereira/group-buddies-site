@@ -15,6 +15,7 @@ end
 require_relative 'helpers/helpers'
 
 set :sass, :style => :compressed
+set :static, true
 
 
 get '/stylesheets/:filename.css' do
