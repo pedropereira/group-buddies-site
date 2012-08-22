@@ -4,10 +4,6 @@
   box-sizing: border-box
 
 
-img
-  max-width: 100%
-
-
 .wrapper
   margin: auto
   position: relative
@@ -63,6 +59,10 @@ nav
     border-radius: 8px
 
 
+.touchdown
+  display: none
+
+
 #home
   background-color: #0091DA
   height: 720px
@@ -94,7 +94,7 @@ nav
   background-image: url('/images/coffee.png')
   background-position: 0% 50%
   background-repeat: no-repeat
-  background-size: 50%
+  background-size: 600px
   height: 720px
 
   h1
@@ -121,6 +121,7 @@ nav
 
   span
     display: block
+    padding-bottom: 5px
 
 
 #what-we-do
@@ -139,7 +140,7 @@ nav
     width: 50%
 
 
-#what-we-did
+#our-work
   background-color: #323232
   height: 720px
 
@@ -148,57 +149,43 @@ nav
     padding-top: 100px
 
   .thumbnail
-    background-size: 100%
-    background-repeat: no-repeat
     display: inline-block
-    height: 136px
-    margin: 0 0.9% 9%
+    height: 150px
+    margin: 0 1.3% 8%
     vertical-align: top
-    width: 23%
+    width: 29.2% //23%
     -webkit-transition: background-image 0.2s ease-in-out
     -moz-transition: background-image 0.2s ease-in-out
     -o-transition: background-image 0.2s ease-in-out
     transition: background-image 0.2s ease-in-out
 
-  .cbfp
-    background-image: url('/images/portfolio/cbfp.png')
+  img
+    max-width: 100%
+
+  .jsf:hover
+    background-image: url('/images/portfolio/jsf_hover.png')
 
   .cbfp:hover
     background-image: url('/images/portfolio/cbfp_hover.png')
 
-  .yme
-    background-image: url('/images/portfolio/yme.png')
-
   .yme:hover
     background-image: url('/images/portfolio/yme_hover.png')
-
-  .dia-do-estudante
-    background-image: url('/images/portfolio/dia.png')
 
   .dia-do-estudante:hover
     background-image: url('/images/portfolio/dia_hover.png')
 
-  .cesium
-    background-image: url('/images/portfolio/ces.png')
-
   .cesium:hover
     background-image: url('/images/portfolio/ces_hover.png')
 
-  .atreve-te
-    background-image: url('/images/portfolio/atr.png')
-
   .atreve-te:hover
     background-image: url('/images/portfolio/atr_hover.png')
-
-  .nemum
-    background-image: url('/images/portfolio/nem.png')
 
   .nemum:hover
     background-image: url('/images/portfolio/nem_hover.png')
 
   .name
     display: inline-block
-    padding: 66% 0 3%
+    padding: 5% 0 2%
 
   .info
     display: block
@@ -207,9 +194,9 @@ nav
 #hire-us
   background-color: #0091DA
   background-image: url('/images/envelope.png')
-  background-position: -30% 240%
+  background-position: -140px 320px
   background-repeat: no-repeat
-  background-size: 60%
+  background-size: 732px
   height: 720px
 
   h1
@@ -252,12 +239,12 @@ nav
       padding: 3%
 
 
-footer
+#contact-us
   background-color: #323232
   background-image: url('/images/pt.png')
   background-position: 100% 60%
   background-repeat: no-repeat
-  background-size: 30%
+  background-size: 391px
   height: 700px
 
   h1
@@ -283,7 +270,7 @@ footer
     background-image: url('/images/location.png')
     background-position: 2px 50%
 
-  .connect-with-us
+  .connect
     margin-left: 30px
 
   .linkedin
@@ -295,7 +282,7 @@ footer
   .facebook
     background-image: url('/images/facebook.png')
 
-  .subscribe-to-us
+  .subscribe
     margin-left: 30px
 
     input
@@ -336,9 +323,11 @@ footer
   #slogan
     margin-top: 0.8em
 
+  #who-we-are
+    background-position: -100px 50% !important
+
   #hire-us
-    background-position: -60% 250% !important
-    background-size: 70% !important
+    background-position: -200px 320px !important
 
 
 @media (max-width: 960px)
@@ -362,32 +351,26 @@ footer
   #slogan
     margin-top: 0 !important
 
+  #who-we-are
+    background-position: -170px 50% !important
+
+    p
+      padding-bottom: 5% !important
+
+    .member-thumbnail
+      width: 32% !important
+
+    img
+      width: 80% !important
+
   #what-we-do
     background-size: 35%
 
   #hire-us
-    background-position: -100% 210% !important
-    background-size: 75% !important
+    background-position: -260px 320px !important
 
-  footer
-    background-position: 110% 60% !important
-    background-size: 35% !important
-
-
-@media (max-width: 840px)
-  #home
-    font-size: 3.2em !important
-
-  #what-we-did
-    .thumbnail
-      width: 30%
-
-  #hire-us
-    background-position: -140% 180% !important
-    background-size: 80% !important
-
-  footer
-    background-size: 40% !important
+  #contact-us
+    background-size: 340px !important
 
     section
       display: block
@@ -395,54 +378,104 @@ footer
       margin-left: 0 !important
       margin-top: 0
 
-    .contact-us
+    .contact
       margin-top: 80px
 
-    .subscribe-to-us
+    .subscribe
       width: 200px
 
 
-@media (max-width: 760px)
-  #logo
-    background-image: url('/images/logo_min.png') !important
-    display: block !important
-    float: none !important
-    height: 33px !important
-    margin: 0 auto 20px !important
-    width: 190px !important
+@media (max-width: 840px)
+  #home
+    font-size: 3.2em !important
 
-  nav
-    float: none !important
-    text-align: center !important
-
-  #slogan
-    display: none !important
+  #our-work
+    .thumbnail
+      width: 30%
 
   #hire-us
-    background-position: -210% 170% !important
-    background-size: 85% !important
-
-  footer
-    background-size: 45% !important
+    background-position: -320px 320px !important
 
 
-@media (max-width: 680px)
-  body
-    font-size: 85% !important
+@media (max-width: 780px)
+  #logo
+    background-size: 45px !important
+
+  nav
+    font-size: 0.7em !important
+
+  #slogan
+    font-size: 0.8em !important
 
   #home
     font-size: 3em !important
 
+  #who-we-are
+    background-position: -250px 50% !important
+
   #hire-us
-    background-position: -210% 150% !important
+
+    form
+      width: 100% !important
+
+  #contact-us
+    background-position: 120% 60%
 
 
-@media (max-width: 630px)
+@media (max-width: 660px)
+
   body
     font-size: 80% !important
 
-  .member-thumbnail
-    margin-right: 15% !important
+  // drop-down menu
+  .touchdown-list
+    display: none
+
+  // drop-down menu
+  .touchdown
+    display: block
+
+  #slogan
+    margin-right: 0 !important
+
+  #who-we-are
+    background-position: -220px 50% !important
+    background-size: 500px
+
+    h1, p, ul
+      padding-left: 42% !important
 
   #what-we-do
     background-position: 80% 50%
+
+
+@media (max-width: 610px)
+
+  #who-we-are
+    background-image: none !important
+
+    h1, p, ul
+      padding-left: 0 !important
+
+    ul
+      margin-top: 50px !important
+
+    .member-thumbnail
+      margin-left: 5% !important
+      margin-right: 5% !important
+      width: 90px !important
+
+  #what-we-do
+    background-image: none !important
+
+    li
+      width: 100% !important
+
+  #our-work
+
+    .thumbnail
+      margin: 0 5% 4% !important
+      width: 38% !important
+
+  #contact-us
+    background-image: none !important

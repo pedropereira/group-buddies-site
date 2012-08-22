@@ -1,3 +1,7 @@
+body
+  overflow: hidden
+
+
 .wrapper
   margin: auto
   width: 75.9% // 960px @ 1280px
@@ -45,27 +49,28 @@ nav
     margin-left: 0
 
 
+.touchdown
+  display: none
+
+
 .team-member
-  left: 0
-  min-height: 100%
-  position: fixed
-  top: 0
-  width: 100%
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
 
   h1
     margin-left: 55%
-    margin-top: 200px
+    padding-top: 200px
 
   h2, p
     margin-left: 55.25%
-    text-shadow: 1px 1px #000
 
   p
     margin-top: 3%
+
+  img
+    max-width: 100%
+    min-height: 100%
+    position: absolute
+    top: 0
+    z-index: -1
 
   .arrow
     display: block
@@ -95,35 +100,13 @@ nav
     opacity: 1
 
 
-#andre
-  background: url('/images/team/andre_santos.jpg') no-repeat center fixed
-
-
-#hugo
-  background: url('/images/team/hugo_marinho.jpg') no-repeat center fixed
-
-
-#luis
-  background: url('/images/team/luis_zamith.jpg') no-repeat center fixed
-
-
-#miguel
-  background: url('/images/team/miguel_regedor.jpg') no-repeat center fixed
-
-
-#pedro
-  background: url('/images/team/pedro_pereira.jpg') no-repeat center fixed
-
-
-#roberto
-  background: url('/images/team/roberto_machado.jpg') no-repeat center fixed
-
-
 // =============
 // MEDIA QUERIES
 // =============
 
-@media (max-width: 1040px)
+
+@media (max-width: 1050px)
+
   #logo
     background-image: url('/images/icon.png') !important
     background-position: 0 !important
@@ -131,22 +114,54 @@ nav
     height: 50px !important
     width: 50px !important
 
+  .team-member
+
+    h1
+      margin-left: 60% !important
+      padding-top: 200px !important
+
+    h2, p
+      margin-left: 60.25% !important
+
+    img
+      min-width: 110% !important
+
 
 @media (max-width: 880px)
+
   body
     font-size: 90% !important
 
-  #logo
-    background-image: url('/images/logo_min.png') !important
-    display: block !important
-    float: none !important
-    height: 33px !important
-    margin: 0 auto 20px !important
-    width: 190px !important
-
   nav
-    float: none !important
-    text-align: center !important
+    font-size: 0.75em !important
 
   h1
     font-size: 2.3em !important
+
+  .team-member
+
+    h1
+      margin-left: 0 !important
+      padding-top: 420px !important
+
+    h2, p
+      margin-left: 0 !important
+
+    img
+      min-width: 130% !important
+
+
+@media (max-width: 770px)
+
+  // drop-down menu
+  .touchdown-list
+    display: none
+
+  // drop-down menu
+  .touchdown
+    display: block
+
+  .team-member
+
+    img
+      min-width: 140% !important

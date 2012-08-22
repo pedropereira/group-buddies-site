@@ -50,13 +50,15 @@ nav
     margin-left: 0
 
 
+.touchdown
+  display: none
+
+
 h1
   background-image: url('/images/portfolio/link.png')
   background-repeat: no-repeat
-  background-position: 100% 60%
-  position: absolute
-  top: 120px
-  padding: 5px 45px 5px 0
+  background-position: 100% 95%
+  padding: 120px 45px 5px 0
   -webkit-transition: all 0.2s ease-in-out
   -moz-transition: all 0.2s ease-in-out
   -o-transition: all 0.2s ease-in-out
@@ -72,7 +74,7 @@ p, img
 
 
 #type
-  padding-top: 155px
+  padding-top: 5px
 
 
 img
@@ -93,7 +95,8 @@ img
 
 
 
-@media (max-width: 1170px)
+@media (max-width: 1020px)
+
   #logo
     background-image: url('/images/icon.png') !important
     background-position: 0 !important
@@ -102,24 +105,21 @@ img
     width: 50px !important
 
 
-@media (max-width: 980px)
+@media (max-width: 840px)
+
   body
     font-size: 90% !important
 
-  #logo
-    background-image: url('/images/logo_min.png') !important
-    display: block !important
-    float: none !important
-    height: 33px !important
-    margin: 0 auto 20px !important
-    width: 190px !important
-
   nav
-    float: none !important
-    text-align: center !important
+    font-size: 0.75em !important
 
-  h1
-    top: 150px !important
 
-  #type
-    padding-top: 185px !important
+@media (max-width: 720px)
+
+  // drop-down menu
+  .touchdown-list
+    display: none
+
+  // drop-down menu
+  .touchdown
+    display: block

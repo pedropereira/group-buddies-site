@@ -6,5 +6,6 @@
 jQuery.noConflict();
 
 jQuery(document).ready(function($) {
-    $.preloadCssImages();
+  $.preloadCssImages();
+  $('nav ul').Touchdown();
 });

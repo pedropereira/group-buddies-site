@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
     home: $("#home").offset().top - 40,
     who_we_are: $("#who-we-are").offset().top - 40,
     what_we_do: $("#what-we-do").offset().top - 40,
-    what_we_did: $("#what-we-did").offset().top - 40,
+    what_we_did: $("#our-work").offset().top - 40,
     contact: $("#hire-us").offset().top - 40,
     footer: $("footer").offset().top - 40,
 
@@ -132,7 +132,7 @@ jQuery(document).ready(function($) {
         else if(window.pageYOffset >= header_nav.what_we_do && window.pageYOffset < header_nav.what_we_did) // What we do
           header_nav.add_class_to_one("#nav-what-we-do","current");
         else if(window.pageYOffset >= header_nav.what_we_did && window.pageYOffset < header_nav.contact)    // What we did
-          header_nav.add_class_to_one("#nav-what-we-did","current");
+          header_nav.add_class_to_one("#nav-our-work","current");
         else if(window.pageYOffset >= header_nav.contact && window.pageYOffset < header_nav.footer)         // Contact
           header_nav.add_class_to_one("#nav-hire-us","current");
         else if(window.pageYOffset >= header_nav.footer)                                                    // footer
@@ -153,7 +153,7 @@ jQuery(document).ready(function($) {
           case "nav-what-we-do":
             new_pos = header_nav.what_we_do;
             break;
-          case "nav-what-we-did":
+          case "nav-our-work":
             new_pos = header_nav.what_we_did;
             break;
           case "nav-hire-us":
@@ -179,7 +179,7 @@ jQuery(document).ready(function($) {
   };
 
   var key_navigation = {
-    page_order: ["home", "who-we-are", "what-we-do", "what-we-did", "hire-us", "contact-us"],
+    page_order: ["home", "who-we-are", "what-we-do", "our-work", "hire-us", "contact-us"],
 
     up_action: function(current_page,event){
       event.preventDefault();

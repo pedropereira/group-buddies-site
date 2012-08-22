@@ -8,18 +8,27 @@
       <nav>
         <ul>
           <li><a id="nav-home" href="/">Back to home</a></li>
+          <li><a id="nav-jsf" href="/portfolio/jsf">JSF</a></li>
           <li><a id="nav-cbfp" href="/portfolio/cbfp">CBFP</a></li>
           <li><a id="nav-yme" href="/portfolio/yme">YME</a></li>
-          <li><a id="nav-dia-do-estudante" href="/portfolio/dia-do-estudante">Dia do Estudante</a></li>
+          <li><a id="nav-dia-do-estudante" href="/portfolio/dia-do-estudante">DE</a></li>
           <li><a id="nav-cesium" href="/portfolio/cesium">CeSIUM</a></li>
           <li><a id="nav-atreve-te" href="/portfolio/atreve-te">Atreve-te</a></li>
-          <li><a id="nav-nemum" href="/portfolio/nemum">NEMUM</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <div class="wrapper">
+    <section id="jsf" class="project <%= @name != 'jsf' ? 'hidden' : '' %>">
+      <a href="http://www.cbfp.uminho.pt" title="Visit Web site"><h1>Jovens sem Fronteiras</h1></a>
+
+      <p id="type">Design and Development</p>
+
+      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <img src="/images/portfolio/jsf_screenshot.jpg" alt="Jovens sem Fronteiras">
+    </section>
+
     <section id="cbfp" class="project <%= @name != 'cbfp' ? 'hidden' : '' %>">
       <a href="http://www.cbfp.uminho.pt" title="Visit Web site"><h1>Centro de Biologia Funcional de Plantas</h1></a>
 
@@ -63,15 +72,6 @@
 
       <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       <img src="/images/portfolio/atr_screenshot.jpg" alt="Atreve-te 2012 - Concurso de Ideias de Negócio">
-    </section>
-
-    <section id="nemum" class="project <%= @name != 'nemum' ? 'hidden' : '' %>">
-      <a href="http://www.nemum.com" title="Visit Web site"><h1>Núcleo de Estudantes de Medicina da Universidade do Minho</h1></a>
-
-      <p id="type">Design and Development</p>
-
-      <p id="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      <img src="/images/portfolio/nem_screenshot.jpg" alt="Núcleo de Estudantes de Medicina da Universidade do Minho">
     </section>
 
     <p id="copyright">© <%= Time.now.year %> Group Buddies. All rights reserved.</p>
