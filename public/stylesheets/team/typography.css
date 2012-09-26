@@ -1,1 +1,53 @@
-@font-face{font-family:"DIN Regular";src:url("/fonts/din_regular.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"TitilliumText22L Thin";src:url("/fonts/titillium_thin.ttf") format("truetype");font-weight:normal;font-style:normal}a{text-decoration:none}.logo{text-indent:-9999px}nav{font-family:"DIN Regular",Arial,Sans-Serif;font-size:0.8em;text-transform:uppercase}nav a{color:#f6f6f8}nav a:hover{color:#0091da}nav a.current{color:#0091da}nav a.current:hover{color:#0091da}.team-member{color:#f6f6f8;font-family:"TitilliumText22L Thin";text-shadow:1px 1px #000}.team-member h1{font-size:3em}.team-member h2{font-size:1.1em}.team-member p{font-size:0.9em;line-height:1.4em}.team-member .social-links{font-size:0.9em}.team-member .social-links a{color:#f6f6f8}.team-member .social-links li{display:inline-block}.team-member .social-links li:hover{text-decoration:underline}.team-member .social-links i{font-size:1.2em;vertical-align:middle}
+@font-face {
+  font-family: "DIN Regular";
+  src: url("/fonts/din_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "TitilliumText22L Thin";
+  src: url("/fonts/titillium_thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+a {
+  text-decoration: none; }
+
+.logo {
+  text-indent: -9999px; }
+
+nav {
+  font-family: "DIN Regular", Arial, Sans-Serif;
+  font-size: 0.8em;
+  text-transform: uppercase; }
+  nav a {
+    color: #f6f6f8; }
+  nav a:hover {
+    color: #0091da; }
+  nav a.current {
+    color: #0091da; }
+  nav a.current:hover {
+    color: #0091da; }
+
+.team-member {
+  color: #f6f6f8;
+  font-family: "TitilliumText22L Thin";
+  text-shadow: 1px 1px black; }
+  .team-member h1 {
+    font-size: 3em; }
+  .team-member h2 {
+    font-size: 1.1em; }
+  .team-member p {
+    font-size: 0.9em;
+    line-height: 1.4em; }
+  .team-member .social-links {
+    font-size: 0.9em; }
+    .team-member .social-links a {
+      color: #f6f6f8; }
+    .team-member .social-links li {
+      display: inline-block; }
+    .team-member .social-links li:hover {
+      text-decoration: underline; }
+    .team-member .social-links i {
+      font-size: 1.2em;
+      vertical-align: middle; }
