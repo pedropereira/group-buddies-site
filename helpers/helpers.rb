@@ -18,7 +18,7 @@ helpers do
   end
 
   def link_to_stylesheet(filename)
-    "<link rel=\"stylesheet\" type=\"text/css\" href=http://www.groupbuddies.com#{filename}>"
+    "<link rel=\"stylesheet\" type=\"text/css\" href=#{base_url}#{filename}>"
   end
 
   def link_to_javascript(filename)
