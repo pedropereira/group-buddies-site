@@ -33,7 +33,7 @@ end
 
 
 get '/' do
-  @stylesheets = ['/stylesheets/reset.css', '/stylesheets/index/structure.css', '/stylesheets/index/typography.css']
+  @stylesheets = ['/stylesheets/reset.css', '/stylesheets/index/structure.css', '/stylesheets/index/typography.css', '/stylesheets/font-awesome.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/jquery.touchdown.min.js', '/javascripts/application.js', '/javascripts/index.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
   erb :index
@@ -53,16 +53,27 @@ end
 
 post '/contact' do
   Pony.mail :to => 'contact@groupbuddies.com',
-            :from => params[:email],
+            :from => 'noreply@groupbuddies.com',
+            :reply_to => params[:email],
             :subject => '[groupbuddies.com] Message from ' + params[:name],
-            :body => params[:message]
+            :body => params[:message],
+            :via => :smtp,
+            :via_options => {
+              :address              => 'smtp.gmail.com',
+              :port                 => '587',
+              :enable_starttls_auto => true,
+              :user_name            => 'noreply@groupbuddies.com',
+              :password             => 'noreplygbsuperpass',
+              :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+              :domain               => "groupbuddies.com" # the HELO domain provided by the client to the server
+            }
 
   redirect to('/') unless request.xhr?
 end
 
 
 get '/team/:member' do
-  @stylesheets = ['/stylesheets/reset.css', '/stylesheets/team/structure.css', '/stylesheets/team/typography.css']
+  @stylesheets = ['/stylesheets/reset.css', '/stylesheets/team/structure.css', '/stylesheets/team/typography.css', '/stylesheets/font-awesome.css']
   @javascripts = ['/javascripts/jquery.js', '/javascripts/jquery-ui.min.js', '/javascripts/jquery.touchdown.min.js', '/javascripts/application.js', '/javascripts/team.js', '/javascripts/preloadCssImages.jQuery_v5.js']
 
   @member = params[:member]

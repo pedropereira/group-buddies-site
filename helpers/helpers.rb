@@ -9,15 +9,19 @@ helpers do
     end
   end
 
+  def base_url
+    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
+  end
+
   def email_exists?(filename, email)
     File.readlines(filename).grep(/#{email}/).any?
   end
 
   def link_to_stylesheet(filename)
-    "<link rel=\"stylesheet\" type=\"text/css\" href=#{filename}>"
+    "<link rel=\"stylesheet\" type=\"text/css\" href=#{base_url}#{filename}>"
   end
 
   def link_to_javascript(filename)
-    "<script type=\"text/javascript\" src=#{filename} charset=\"utf-8\"></script>"
+    "<script type=\"text/javascript\" src=#{base_url}#{filename} charset=\"utf-8\"></script>"
   end
 end
