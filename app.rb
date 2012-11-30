@@ -64,8 +64,7 @@ post '/contact' do
               :enable_starttls_auto => true,
               :user_name            => 'noreply@groupbuddies.com',
               :password             => 'noreplygbsuperpass',
-              :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
-              :domain               => "groupbuddies.com" # the HELO domain provided by the client to the server
+              :authentication       => :plain # :plain, :login, :cram_md5, no auth by default
             }
 
   redirect to('/') unless request.xhr?
