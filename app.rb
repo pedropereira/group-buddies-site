@@ -53,7 +53,7 @@ end
 
 post '/contact' do
   Pony.mail :to => 'contact@groupbuddies.com',
-            :from => 'noreply@groupbuddies.com',
+            :from => params[:email],
             :reply_to => params[:email],
             :subject => '[groupbuddies.com] Message from ' + params[:name],
             :body => params[:message],
