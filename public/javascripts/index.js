@@ -165,7 +165,7 @@ jQuery(document).ready(function($) {
           default:
             new_pos = header_nav.home;
         }
-        $("body,html").animate({scrollTop:new_pos+1}, 1000);
+        $("body,html").stop().animate({scrollTop:new_pos+1}, 1000);
 
         event.preventDefault();
       });
