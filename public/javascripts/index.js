@@ -230,11 +230,72 @@ jQuery(document).ready(function($) {
     init: function(){
       key_navigation.up_or_down();
     }
+  };  //mixpanel
+  var mixpanel_events = {
+
+    logo: function(){
+      mixpanel.track_links("#logo", "logo");
+    },
+
+    facebook: function(){
+      mixpanel.track_links("#facebook", "facebook");
+    },
+
+    twitter: function(){
+      mixpanel.track_links("#twitter", "twitter");
+    },
+
+    linkedin: function(){
+      mixpanel.track_links("#linkedin", "linkedin");
+    },
+
+
+    coming_from: function(){
+      mixpanel.register({ 'referrer': document.referrer });
+    },
+
+    init: function(){
+      mixpanel_events.logo();
+      mixpanel_events.facebook();
+      mixpanel_events.twitter();
+      mixpanel_events.linkedin();
+      mixpanel_events.coming_from();
+    }
   };
 
+  mixpanel_events.init();
   header_logo.init();
   header_nav.init();
   header_nav.change_to_select_menu();
   first_arrow.init();
   key_navigation.init();
 });
+
+jQuery.noConflict();
+
+jQuery(document).ready(function($) {
+
+  // Newsletter
+  $('form').submit(function() {
+    var email = $("input").val();
+    var data = 'email='+ email;
+
+    var pattern = new RegExp(/^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$/);
+    if(pattern.test(email)) {
+      $.ajax({
+        type: "POST",
+        url: "/newsletter",
+        data: data,
+        success: function() {
+            $('#newsletter').remove();
+            $('.social-media').before('<p>Email added, thanks! Now you can check out the links below!</p>');
+            mixpanel_events.add_email(email);
+        }
+      });
+    }
+
+    return false;
+  });
+
+});
+
