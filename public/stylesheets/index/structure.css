@@ -11,8 +11,8 @@
 header {
   background-color: #f6f6f8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding-bottom: 1.5625%;
-  padding-top: 1.5625%;
+  padding-bottom: 1.563%;
+  padding-top: 1.563%;
   position: fixed;
   width: 100%;
   z-index: 10; }
@@ -288,6 +288,10 @@ nav {
       margin-top: 80px; }
     #contact-us .subscribe {
       width: 200px; } }
+@media only screen and (min-width : 1824px) {
+  #our-work .thumbnail {
+    margin-bottom: 7%;
+    width: 18.2%; } }
 @media (max-width: 840px) {
   #home {
     font-size: 3.2em !important; }
