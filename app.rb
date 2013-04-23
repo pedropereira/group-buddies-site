@@ -2,6 +2,7 @@ require 'pony'
 require 'sass'
 require 'sinatra'
 require 'mixpanel'
+require 'gibbon'
 
 require './helpers/helpers.rb'
 require './config/initializers/load_keys.rb'
@@ -21,8 +22,14 @@ end
 
 require_relative 'helpers/helpers'
 
+configure do
+  set :sass, :style => :compressed
 
-set :sass, :style => :compressed
+  set :gb, Gibbon.new(KEYS["mailchimp"])
+  set :list_id, settings.gb.lists({:filters => { :list_name => "gbnews" }})["data"].first["id"]
+end
+
+
 
 before do
   @mixpanel = Mixpanel::Tracker.new(KEYS["mixpanel"], request.env)
@@ -49,18 +56,6 @@ get '/' do
 
   erb :index
 end
-
-
-post '/newsletter' do
-  email_regex = /^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$/
-
-  if params[:email] =~ email_regex and !email_exists?('newsletter.txt', params[:email])
-    add_to_newsletter('newsletter.txt', params[:email])
-  end
-
-  redirect to('/') unless request.xhr?
-end
-
 
 post '/contact' do
   Pony.mail :to => 'contact@groupbuddies.com',
@@ -99,4 +94,22 @@ get '/portfolio/:name' do
   @name = params[:name]
 
   erb :portfolio
+end
+
+post '/newsletter' do
+  email_regex = /^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$/
+
+  if params[:email] =~ email_regex and !email_exists?('newsletter.txt', params[:email])
+    add_to_newsletter('newsletter.txt', params[:email])
+
+    settings.gb.listSubscribe({ :id => settings.list_id,
+                                :email_address => params[:email],
+                                :merge_vars => {:fname => "GB", :lname => "User"},
+                                :double_optin => false,
+                                :send_welcome => true })
+    200
+  else
+    500
+  end
+
 end
