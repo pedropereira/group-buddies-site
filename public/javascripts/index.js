@@ -3,8 +3,9 @@ jQuery.noConflict();
 jQuery(document).ready(function($) {
 
   // Newsletter
-  $('.subscribe-to-us').on('click', 'button', function() {
-    var email = $(".subscribe-to-us input").val();
+  $('#newsletter').on('click', 'button', function() {
+    $('#newsletter button').attr("disabled", true);
+    var email = $("#newsletter input").val();
     var data = 'email='+ email;
 
     $.ajax({
@@ -12,12 +13,69 @@ jQuery(document).ready(function($) {
       url: "/newsletter",
       data: data,
       success: function() {
-        $('.subscribe-to-us button').text('Added!');
+        $('#newsletter button').text('Added!');
+        setTimeout(function(){
+          $('#newsletter button').text('Add to Newsletter');
+        }, 3000);
+
+        $('#newsletter input[type=email]').val('');
+        $('#newsletter button').attr("disabled", false);
+      },
+      error: function() {
+        $('#newsletter button').text('Ups, try again!');
+        setTimeout(function(){
+          $('#newsletter button').text('Add to Newsletter');
+        }, 3000);
+
+        $('#newsletter input[type=email]').val('');
+        $('#newsletter button').attr("disabled", false);
       }
+
     });
 
     return false;
   });
+
+  // Contact
+  $('#contact').on('click', 'button', function() {
+    $('#contact button').attr("disabled", true);
+    $('#contact button').text('Sending...');
+    var name = $("#contact input[name=name]").val();
+    var email = $("#contact input[name=email]").val();
+    var message = $("#contact textarea").val();
+
+    $.ajax({
+      type: "POST",
+      url: "/contact",
+      data: {name: name, email: email, message: message},
+      success: function() {
+        $('#contact button').text('Your message as been sent!');
+        setTimeout(function(){
+          $('#contact button').text('Send');
+        }, 3000);
+
+        $('#contact input[type=text]').val('');
+        $('#contact input[type=email]').val('');
+        $('#contact textarea').val('');
+        $('#contact button').attr("disabled", false);
+      },
+      error: function() {
+        $('#contact button').text('Ups, try again!');
+        setTimeout(function(){
+          $('#contact button').text('Send');
+        }, 3000);
+
+        $('#contact input[type=text]').val('');
+        $('#contact input[type=email]').val('');
+        $('#contact textarea').val('');
+        $('#contact button').attr("disabled", false);
+      }
+
+    });
+
+    return false;
+  });
+
 
   var header_logo = {
     change_at: $("#who-we-are").offset().top - 700,
@@ -274,28 +332,6 @@ jQuery(document).ready(function($) {
 jQuery.noConflict();
 
 jQuery(document).ready(function($) {
-
-  // Newsletter
-  $('form').submit(function() {
-    var email = $("input").val();
-    var data = 'email='+ email;
-
-    var pattern = new RegExp(/^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$/);
-    if(pattern.test(email)) {
-      $.ajax({
-        type: "POST",
-        url: "/newsletter",
-        data: data,
-        success: function() {
-            $('#newsletter').remove();
-            $('.social-media').before('<p>Email added, thanks! Now you can check out the links below!</p>');
-            mixpanel_events.add_email(email);
-        }
-      });
-    }
-
-    return false;
-  });
 
 });
 
